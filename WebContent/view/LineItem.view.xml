@@ -1,0 +1,47 @@
+<core:View
+	controllerName="sap.ui.demo.myFiori.view.LineItem"
+	xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		id="page"
+		title=" {i18n>LineItemTitle}"
+		showNavButton="true"
+		navButtonPress="handleNavBack" >
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+		<content>
+			<ObjectHeader
+				title="{ProductId}"
+				number="{GrossAmount}"
+				numberUnit="{CurrencyCode}" >
+				<attributes>
+					<ObjectAttribute text="{
+						path:'DeliveryDate',
+						formatter:'sap.ui.demo.myFiori.util.Formatter.date'
+					}" />
+					<ObjectAttribute text="{
+						path:'Quantity',
+						formatter:'sap.ui.demo.myFiori.util.Formatter.quantity'
+					}" />
+				</attributes>
+			</ObjectHeader>
+			<form:SimpleForm
+				id="form"
+				minWidth="1024"
+				title="Delivery On"
+				maxContainerCols="2" >
+					<Label text="Plant"/>
+					<Text text="SAP SE"/>
+					<Label text="Street"/>
+					<Text text="Dietmar-Hopp-Allee"/>
+					<Label text="City"/>
+					<Text text="Walldorf"/>
+					<Label text="Country"/>
+					<Text text="Germany"/>
+			</form:SimpleForm>
+		</content>
+	</Page>
+</core:View>
